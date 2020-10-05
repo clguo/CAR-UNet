@@ -145,6 +145,3 @@ print("acc:",np.mean(acc_per_fold))
 print("auc:",np.mean(auc_per_fold))
 
 
-with open('Stare/result.txt','w') as f:
-    f.write("Sen:"+str(np.mean(sen_per_fold))+" Spe:"+str(np.mean(spe_per_fold))+" ACC:"+str(np.mean(acc_per_fold))+" AUC:"+str(np.mean(auc_per_fold))+" IOU:"+str(np.mean(iou_per_fold))+" mcc:"+str(np.mean(mcc_per_fold))+" F1:"+str(np.mean(f1_per_fold)))
-
