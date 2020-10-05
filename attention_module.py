@@ -43,21 +43,3 @@ def unsqueeze(input):
 def squeeze(input):
     return K.squeeze(input,axis=-1)
 
-
-def meca_block2(input_feature, k_size=3):
-    channel_axis = 1 if K.image_data_format() == "channels_first" else -1
-    channel = input_feature._keras_shape[channel_axis]
-    avg_pool = GlobalAveragePooling2D()(input_feature)
-    avg_pool = Reshape((1, 1, channel))(avg_pool)
-
-    max_pool = GlobalMaxPooling2D()(input_feature)
-    max_pool = Reshape((1, 1, channel))(max_pool)
-
-
-    eca_feature = Add()([avg_pool, max_pool])
-    eca_feature = Activation('sigmoid')(eca_feature)
-
-    if K.image_data_format() == "channels_first":
-        eca_feature = Permute((3, 1, 2))(eca_feature)
-
-    return multiply([input_feature, eca_feature])
