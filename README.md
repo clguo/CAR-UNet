@@ -10,7 +10,7 @@ We train and evaluate on Ubuntu 16.04, it will also work for Windows and OS.
 
 
 # MECA
-In this paper we propose a Modified Efficient Channel Attention (MECA), and its specific structure is shown in the figure below.
+In this paper we propose a Modified Efficient Channel Attention (MECA), and its specific structure is shown in the figure below. The code can be found at[attention_module.py](attention_module.py) <br>
 ![MECA](2.png?raw=true "MECA")
 ## Quick start 
 
