@@ -1,5 +1,5 @@
 ![CAR-UNet](1.png?raw=true "CAR-UNet")
-# [Channel Attention Residual U-Net for Retinal Vessel Segmentation](https://arxiv.org/abs/2009.08829)
+# [Channel Attention Residual U-Net for Retinal Vessel Segmentation](https://arxiv.org/abs/2004.03702)
 This code is for the paper: Channel Attention Residual U-Net for Retinal Vessel Segmentation. We report state-of-the-art performances on DRIVE, CHASE DB1 and STARE datasets.
 
 Code written by Changlu Guo, Budapest University of Technology and Economics(BME).
