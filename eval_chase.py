@@ -75,10 +75,3 @@ print('Accuracy:', accuracy_score(y_test, y_pred_threshold))
 print('Sensitivity:', recall_score(y_test, y_pred_threshold))
 print('Specificity', tn / (tn + fp))
 print('AUC:', roc_auc_score(y_test, list(np.ravel(y_pred))))
-print("F1:",2*tp/(2*tp+fn+fp))
-N=tn+tp+fn+fp
-S=(tp+fn)/N
-P=(tp+fp)/N
-
-print("IOU:",tp/(fp+tp+fn))
-print("MCC:",(tp/N-S*P)/math.sqrt(P*S*(1-S)*(1-P)))
